@@ -17,6 +17,7 @@ private  final By HOME_TITLE = By.xpath("//span[contains(@class, 'breadcrumbDeta
 @Step("Открытие Главной страницы")
 public  void openHomePage(){
         driver.get(BASE_URL + "/lightning/setup/SetupOneHome/home");
+    new WebDriverWait(driver, Duration.ofSeconds(50));
 }
 
 @Step("Проверка открытия Главной страницы")

@@ -3,6 +3,9 @@ package Pages;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class AccountsPage extends BasePage{
     public AccountsPage(WebDriver driver) {
@@ -28,5 +31,6 @@ public class AccountsPage extends BasePage{
         //driver.findElement(NEW_BUTTON).click();
         //driver.get("https://tms9-dev-ed.develop.lightning.force.com/lightning/o/Account/new");
         driver.get("https://tms9-dev-ed.develop.lightning.force.com/lightning/o/Account/new?count=1");
+        new WebDriverWait(driver, Duration.ofSeconds(50));
     }
 }
