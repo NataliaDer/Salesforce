@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
@@ -8,10 +8,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class mainPage extends basePage {
+public class MainPage extends BasePage {
     private final By HOME_TITLE = By.xpath("//span[contains(@class, 'breadcrumbDetail uiOutputText') and text()='Home']");
 
-    public mainPage(WebDriver driver) {
+    public MainPage(WebDriver driver) {
         super(driver);
     }
 

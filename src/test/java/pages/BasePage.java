@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 /*
 1. В проекте Salesforce реализовать структуру фреймворка с помощью
 Page Object Model: LoginPage, MainPage, AccountsPage,
@@ -12,12 +12,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
-public class basePage {
+public class BasePage {
     protected final String BASE_URL = "https://tms9-dev-ed.develop.my.salesforce.com";
     WebDriver driver;
     WebDriverWait wait;
 
-    public basePage(WebDriver driver) {
+    public BasePage(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(50));
     }

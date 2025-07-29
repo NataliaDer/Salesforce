@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
@@ -7,12 +7,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class loginPage extends basePage {
+public class LoginPage extends BasePage {
 
     private final By USERNAME_FIELD = By.id("username");
     private final By PASSWORD_FIELD = By.id("password");
     private final By ENTER_BUTTON = By.id("Login");
-    public loginPage(WebDriver driver) {
+    public LoginPage(WebDriver driver) {
         super(driver);
     }
 

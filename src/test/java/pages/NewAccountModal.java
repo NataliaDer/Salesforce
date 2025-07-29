@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import Wrappers.CheckBox;
 import Wrappers.DropDown;
@@ -11,11 +11,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class newAccountModal extends basePage {
+public class NewAccountModal extends BasePage {
     private final By NEW_ACCOUNTMODAL_TITLE = By.xpath("//h2[contains(@class, 'slds-modal__title') and contains (text(), 'New Account')]");
     private final By SAVE_BUTTON = By.xpath("//button[@name='SaveEdit']");
     private final By TITLE_NEW_ACCOUNT = By.xpath("//p[contains(@class, 'slds-text-title') and contains(text(), 'Account Owner')]");
-    public newAccountModal(WebDriver driver) {
+    public NewAccountModal(WebDriver driver) {
         super(driver);
     }
 

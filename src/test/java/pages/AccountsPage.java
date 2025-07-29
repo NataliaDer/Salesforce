@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
@@ -7,11 +7,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class accountsPage extends basePage {
+public class AccountsPage extends BasePage {
     protected final String ACCOUNTS_URL = BASE_URL + "/lightning/o/Account/list?filterName=__Recent";
     private final By ACCOUNTS_TITLE = By.xpath("//h1[contains(@class, 'slds-var-p-right_x-small') and text()='Accounts']");
     private final By NEW_BUTTON = By.cssSelector("[title=New]");
-    public accountsPage(WebDriver driver) {
+    public AccountsPage(WebDriver driver) {
         super(driver);
     }
 

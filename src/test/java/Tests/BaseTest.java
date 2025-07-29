@@ -1,9 +1,9 @@
 package Tests;
 
-import Pages.accountsPage;
-import Pages.loginPage;
-import Pages.mainPage;
-import Pages.newAccountModal;
+import pages.AccountsPage;
+import pages.LoginPage;
+import pages.MainPage;
+import pages.NewAccountModal;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -21,10 +21,10 @@ import java.util.HashMap;
 public class BaseTest {
     WebDriver driver;
     SoftAssert softAssert;
-    accountsPage accountsPage;
-    loginPage loginPage;
-    mainPage mainPage;
-    newAccountModal newAccountModal;
+    AccountsPage accountsPage;
+    LoginPage loginPage;
+    MainPage mainPage;
+    NewAccountModal newAccountModal;
 
     @Parameters({"browser"})
     @BeforeMethod(alwaysRun = true, description = "Настройка драйвера")
@@ -46,10 +46,10 @@ public class BaseTest {
         softAssert = new SoftAssert();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         iTestContext.setAttribute("driver", driver);
-        loginPage = new loginPage(driver);
-        accountsPage = new accountsPage(driver);
-        mainPage = new mainPage(driver);
-        newAccountModal = new newAccountModal(driver);
+        loginPage = new LoginPage(driver);
+        accountsPage = new AccountsPage(driver);
+        mainPage = new MainPage(driver);
+        newAccountModal = new NewAccountModal(driver);
     }
 
     @AfterMethod (alwaysRun = true)
