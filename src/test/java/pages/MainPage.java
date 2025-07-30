@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 
 public class MainPage extends BasePage {
@@ -16,14 +15,16 @@ public class MainPage extends BasePage {
     }
 
     @Step("Открытие Главной страницы")
-    public void openHomePage() {
+    public MainPage openHomePage() {
         driver.get(BASE_URL + "/lightning/setup/SetupOneHome/home");
         new WebDriverWait(driver, Duration.ofSeconds(50));
+        return this;
     }
 
     @Step("Проверка открытия Главной страницы")
-    public boolean IsMainPageOpened() {
+    public MainPage IsMainPageOpened() {
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(HOME_TITLE));
-        return driver.findElement(HOME_TITLE).isDisplayed();
+        driver.findElement(HOME_TITLE).isDisplayed();
+        return this;
     }
 }

@@ -15,18 +15,21 @@ public class AccountsPage extends BasePage {
         super(driver);
     }
 
-    public void openNewAccount_Page() {
+    public AccountsPage openNewAccount_Page() {
         driver.get(ACCOUNTS_URL);
+        return this;
     }
 
     @Step("Проверка открытия страницы Аккаунты")
-    public boolean isAccountsPageOpened() {
-        return driver.findElement(ACCOUNTS_TITLE).isDisplayed();
+    public AccountsPage isAccountsPageOpened() {
+         driver.findElement(ACCOUNTS_TITLE).isDisplayed();
+         return this;
     }
 
     @Step("Открытие страницы Создания нового аккаунта")
-    public void openNewAccountPage() {
+    public NewAccountModal openNewAccountPage() {
         driver.get("https://tms9-dev-ed.develop.lightning.force.com/lightning/o/Account/new?count=1");
         new WebDriverWait(driver, Duration.ofSeconds(50));
+        return new NewAccountModal(driver);
     }
 }

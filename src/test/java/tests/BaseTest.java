@@ -1,9 +1,6 @@
-package Tests;
+package tests;
 
-import pages.AccountsPage;
-import pages.LoginPage;
-import pages.MainPage;
-import pages.NewAccountModal;
+import pages.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,6 +10,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.ITestContext;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
+import steps.AccountStep;
+import steps.LoginStep;
+import steps.MainPageStep;
 
 import java.time.Duration;
 import java.util.HashMap;
@@ -25,6 +25,11 @@ public class BaseTest {
     LoginPage loginPage;
     MainPage mainPage;
     NewAccountModal newAccountModal;
+    NewAccountPage newAccountPage;
+    LoginStep loginStep;
+    AccountStep accountStep;
+    MainPageStep mainPageStep;
+    AccountsPage accountsStep;
 
     @Parameters({"browser"})
     @BeforeMethod(alwaysRun = true, description = "Настройка драйвера")
@@ -50,6 +55,11 @@ public class BaseTest {
         accountsPage = new AccountsPage(driver);
         mainPage = new MainPage(driver);
         newAccountModal = new NewAccountModal(driver);
+        newAccountPage = new NewAccountPage(driver);
+        loginStep = new LoginStep(driver);
+        accountStep = new AccountStep(driver);
+        mainPageStep = new MainPageStep (driver);
+        accountsStep = new AccountsPage(driver);
     }
 
     @AfterMethod (alwaysRun = true)
