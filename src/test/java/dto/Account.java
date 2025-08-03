@@ -10,7 +10,7 @@ public class Account {
         private String name;
         private String phone;
         @Builder.Default
-        private String fax = null;
+        private String fax = "";
         private String account_number;
         private String website;
         private String account_site;
