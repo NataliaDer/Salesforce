@@ -1,10 +1,9 @@
 package Tests;
 
-import Pages.AccountsPage;
-import Pages.LoginPage;
-import Pages.BasePage;
-import Pages.MainPage;
-import Pages.NewAccountModal;
+import pages.AccountsPage;
+import pages.LoginPage;
+import pages.MainPage;
+import pages.NewAccountModal;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -12,7 +11,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.ITestContext;
-import org.testng.ITestResult;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 

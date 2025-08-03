@@ -1,7 +1,7 @@
 package Wrappers;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
 public class Input {
     WebDriver driver;
     String label;
@@ -11,9 +11,8 @@ public class Input {
         this.label = label;
     }
 
-    public void write(String text){
-        driver.findElement(By.xpath(String.format("//label[text()='%s']//ancestor::lightning-input//input",label)))
+    public void write(String text) {
+        driver.findElement(By.xpath(String.format("//label[text()='%s']//ancestor::lightning-input//input", label)))
                 .sendKeys(text);
     }
-
 }
